@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "PICHINCHA": [-0.180653, -78.467834], "GUAYAS": [-2.170998, -79.922356], "AZUAY": [-2.90012, -79.00589], "MANABI": [-1.05454, -80.45445], "LOJA": [-3.99313, -79.20422], "CHIMBORAZO": [-1.67098, -78.64789], "TUNGURAHUA": [-1.24907, -78.61675], "COTOPAXI": [-0.93223, -78.61675], "LOS RIOS": [-1.0569, -79.4633], "EL ORO": [-3.2581, -79.9573], "IMBABURA": [0.3533, -78.1189], "CAÑAR": [-2.55, -78.93333], "CARCHI": [0.48333, -77.9], "SUCUMBIOS": [0.08333, -76.88333], "ORELLANA": [-0.46667, -76.98333], "ESMERALDAS": [0.96667, -79.65], "BOLIVAR": [-1.58333, -79.0], "GALAPAGOS": [-0.73333, -90.3], "PASTAZA": [-1.48333, -78.0], "NAPO": [-0.8, -77.8], "MORONA SANTIAGO": [-2.3, -78.11667], "ZAMORA CHINCHIPE": [-4.06667, -78.95]
         };
         let allLibrerias = [];
-        fetch('data/filtrado_Completo.csv').then(response => response.text()).then(data => {
+        fetch('./data/filtrado_Completo.csv').then(response => response.text()).then(data => {
              const rows = parseCSV(data).slice(1);
             const provincias = new Set(), estados = new Set();
             allLibrerias = rows.map(row => {
